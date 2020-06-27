@@ -1,0 +1,35 @@
+html {
+    height: 100vh;
+  }
+  body {
+    height: 100%;
+  }
+  .bOPrimary {
+    background-color: #ff5a5b;
+    color: white;
+  }
+  
+  .tOPrimary {
+    color: #ff5a5b;
+  }
+  
+  .bGrey {
+    background-color: #b7bcbf;
+  }
+  .bGreyS {
+    background-color: #797979;
+  }
+  
+  .topnav div.active {
+    border-bottom: 3px solid #46519e;
+  }
+  .topnav {
+    cursor: pointer;
+  }
+  .topnav div {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    border-bottom: 3px solid transparent;
+  }

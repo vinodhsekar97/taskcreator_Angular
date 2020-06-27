@@ -1,0 +1,74 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Topic</h4>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <!-- title -->
+          <label for="topic-title">Title</label>
+          <div class="input-group">
+            <input
+              id="topic-title"
+              class="form-control"
+              placeholder="Add Title"
+              required
+            />
+          </div>
+          <!-- type -->
+          <label for="topic-type">Type</label>
+          <select name="" id="topic-type" class="custom-select">
+            <option value="task" selected>Task</option>
+            <option value="preread">Pre-Read</option>
+            <option value="topic">Topic</option>
+          </select>
+  
+          <!-- content -->
+          <label for="topic-content">Content</label>
+          <div class="input-group">
+            <textarea
+              id="topic-content"
+              class="form-control"
+              placeholder="Add Content"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <!-- instructions -->
+          <label for="topic-instructions">Instructions for Mentor</label>
+          <div class="input-group">
+            <textarea
+              id="topic-instructions"
+              class="form-control"
+              placeholder="Add Instructions"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="addTask(); modal.close('Save click')"
+      >
+        ADD
+      </button>
+    </div>
+  </ng-template>
+  <fa-icon
+    [icon]="faPlusCircle"
+    class="text-secondary btn"
+    style="font-size: 2em;"
+    (click)="open()"
+  ></fa-icon>
